@@ -1,0 +1,316 @@
+:root {
+    --primary: #f9e2af; /* Mocha Yellow */
+    --primary-hover: #f5c2e7; /* Mocha Pink */
+    --secondary: #313244; /* Mocha Surface0 */
+    --text: #cdd6f4; /* Mocha Text */
+    --text-light: #bac2de; /* Mocha Subtext1 */
+    --text-dark: #11111b;
+    --background: #1e1e2e; /* Mocha Base */
+    --card: #45475a; /* Mocha Surface1 */
+    --border: #7f849c; /* Mocha Overlay1 */
+    --success: #a6e3a1; /* Mocha Green */
+    --warning: #f9e2af; /* Mocha Yellow */
+    --danger: #f38ba8; /* Mocha Red */
+    --info: #89b4fa; /* Mocha Blue */
+    --radius: 8px;
+    --shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.centered-link {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+    color: var(--text);
+}
+h1,
+h2,
+h3 {
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+header p {
+    color: var(--text-light);
+    font-size: 1.125rem;
+}
+
+/* Main layout */
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+footer {
+    margin-top: auto; /* This pushes it to the bottom */
+}
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Center the login container on index.html */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+}
+
+/* Style the button container */
+#login-form div:last-child {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Make buttons equal width */
+#login-form .btn {
+    flex: 1;
+}
+.login-page main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+/* Card styles */
+.card {
+    background-color: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    height: 100%;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.card-header h2 {
+    margin-bottom: 0;
+}
+
+/* Form styles */
+.form-section .card {
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    background-color: var(--secondary);
+    transition:
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    font-family: "Inter", sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: var(--primary);
+    color: var(--text-dark);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: var(--radius);
+    transition:
+        background-color 0.15s ease-in-out,
+        transform 0.1s ease;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Filter styles */
+.filter-container {
+    min-width: 150px;
+}
+
+#status-filter {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+/* Games list styles */
+#games-list {
+    padding: 1.5rem;
+}
+
+.game-card {
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    position: relative;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.game-card:last-child {
+    margin-bottom: 0;
+}
+
+.game-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+}
+
+.delete-btn {
+    background-color: var(--danger);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.status-badge.backlog {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.status-badge.playing {
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+
+.status-badge.completed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--text-light);
+    font-style: italic;
+    padding: 2rem 0;
+}
